@@ -9,14 +9,14 @@ import Login from './Login';
 import Admin from './Admin';
 import { AuthProvider } from './AuthContext';
 import ProtectedRoute from './ProtectedRoute';
-
-{/* Nội dung chương 4 */}
+import UserList from './UserList';
 
 function App() {
   return (
     <AuthProvider>
       <Router>
         <nav>
+          <Link to="/usermanage">Quản lý người dùng</Link> | 
           <Link to="/">Trang chủ</Link> | 
           <Link to="/about">Giới thiệu</Link> | 
           <Link to="/contact">Liên hệ</Link> | 
@@ -26,6 +26,7 @@ function App() {
         </nav>
 
         <Routes>
+          <Route path="/usermanage" element={<UserList />} />
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
