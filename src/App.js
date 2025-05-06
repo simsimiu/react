@@ -7,9 +7,27 @@ import NameForm from './NameForm';
 import UserProfile from './UserProfile';
 import LikeButton from './LikeButton';
 
+import Clock from './Clock';
+import InputFocus from './InputFocus';
+import ExpensiveCalc from './ExpensiveCalc';
+import { ThemeProvider } from './ThemeContext';
+import ThemedBox from './ThemedBox';
+
 function App() {
   return (
     <div className="App">
+      {/* Nội dung chương 3 */}
+
+      <ThemeProvider>
+        <div style={{ padding: '20px' }}>
+          <h1>Bài tập cuối chương 3</h1>
+          <Clock />
+          <InputFocus />
+          <ExpensiveCalc />
+          <ThemedBox />
+        </div>
+      </ThemeProvider>
+
       {/* Nội dung chương 2 */}
       <div>
         <HelloUser name="TokyoAI" />
