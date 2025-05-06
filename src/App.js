@@ -1,9 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
+import HelloUser from './HelloUser';
+import UserCard from './UserCard';
+import Counter from './Counter';
+import NameForm from './NameForm';
 
 function App() {
   return (
     <div className="App">
+      {/* Nội dung chương 2 */}
+      <div>
+        <HelloUser name="TokyoAI" />
+      </div>
+      <div>
+        <Profile age={25} />
+      </div>
+      <div>
+        <UserCard name="TokyoAI" age={27} email="email.vn"/>
+        <UserCard name="Sim" age={25} email="email2.vn"/>
+      </div>
+      <div>
+        <h1>Đếm số</h1>
+        <Counter />
+      </div>
+      <div>
+        <h1>Chào mừng!</h1>
+        <NameForm />
+      </div>
+      {/* Nội dung chương 1 */}
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -21,5 +45,20 @@ function App() {
     </div>
   );
 }
+console.log("Hello React")
+
+function Welcome(props) {
+  return <h1>Xin chào, {props.name}</h1>;
+}
+
+// class Welcome extends React.Component {
+//   render() {
+//     return <h1>Xin chào, {this.props.name}</h1>;
+//   }
+// }
+function Profile(props) {
+  return <p>Tuổi: {props.age}</p>;
+}
+
 
 export default App;
