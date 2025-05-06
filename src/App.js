@@ -4,6 +4,8 @@ import HelloUser from './HelloUser';
 import UserCard from './UserCard';
 import Counter from './Counter';
 import NameForm from './NameForm';
+import UserProfile from './UserProfile';
+import LikeButton from './LikeButton';
 
 function App() {
   return (
@@ -27,6 +29,18 @@ function App() {
         <h1>Chào mừng!</h1>
         <NameForm />
       </div>
+      <div>
+      <h1>Danh sách người dùng</h1>
+
+      <UserProfile name="Nguyễn Văn A" age={30} job="Lập trình viên" />
+      <LikeButton />
+
+      <UserProfile name="Trần Thị B" age={25} job="Thiết kế đồ họa" />
+      <LikeButton />
+
+      <UserProfile name="Phạm Văn C" age={40} job="Giáo viên" />
+      <LikeButton />
+    </div>
       {/* Nội dung chương 1 */}
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
